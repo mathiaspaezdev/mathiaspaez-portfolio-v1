@@ -1,0 +1,231 @@
+/* ================================
+   styles.css - (c) MathiasPaez.com
+   ================================== */
+
+/* VARIABLES */
+:root{
+  --bg-dark: #0f0f0f;
+  --text-light: #f6f1eb;
+  --muted: #9a9a9a;
+  --cyan: #00d4ff;
+  --btn-cyan: #7fe6f7;
+  --yellow: #eaff00; /* color EXACTO solicitado */
+}
+
+/* RESET BÁSICO */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Space Grotesk', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  /* espacio para navbar fijo (130px) */
+  padding-top: 130px;
+  scroll-behavior: smooth; /* one-scroll smooth */
+}
+
+/* NAVBAR (FIJA 130px) */
+#mainNav{
+  height: 120px;                 /* altura fija solicitada */
+  background: rgba(15,15,15,0.98);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.navbar-brand{ font-weight:700; letter-spacing:1px; }
+
+/* nav links */
+.nav-link{ color: var(--text-light) !important; margin-left: 14px; font-weight:500; }
+.nav-link:hover{ color: var(--cyan) !important; }
+.nav-icon{ color: var(--text-light); opacity:0.9; margin-left:8px; }
+
+/* PAGE SECTION BASE */
+.section{
+  min-height: calc(100vh - 130px); /* ocupa viewport restante */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* ---------------------------
+   HERO (camino a ser...)
+   --------------------------- */
+.section-hero{
+  /* fondo oscuro con imagen (reemplazá /assets/hero-bg.jpg por tu mockup) */
+  background-image:
+    linear-gradient(rgba(15,15,15,0.65), rgba(15,15,15,0.65)),
+    url('/assets/img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center right;
+  display:flex;
+  align-items:center;
+}
+
+/* Hero Title - grandes y con amarillo para FullStack Developer */
+.hero-title{
+  font-size: 4.2rem;
+  line-height: 0.95;
+  font-weight:700;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+.hero-yellow{ color: var(--yellow); display:inline-block; }
+
+/* video box on hero right */
+.video-box{
+  width:100%;
+  max-width:420px;
+  background: rgba(0,0,0,0.5);
+  border-radius:4px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+/* mock controls below video (visual) */
+.video-controls{ margin-top:8px; }
+.mock-progress{
+  height:6px;
+  background:#444;
+  border-radius:3px;
+  width:220px;
+  overflow:hidden;
+}
+.mock-progress-fill{
+  height:100%;
+  background:#e94e4e; /* rojo de la barra en la captura */
+}
+
+/* Newsletter input (blanco) y boton celeste */
+.form-input-light{
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 8px 12px;
+}
+.btn-newsletter{
+  background: var(--btn-cyan);
+  color:#000;
+  border-radius:18px;
+  border:none;
+  padding:8px 14px;
+}
+
+/* ---------------------------
+   "Esto es lo que estoy haciendo"
+   --------------------------- */
+.section-dark{ background: var(--bg-dark); }
+
+/* video card left */
+.video-card{ border-radius:6px; overflow:hidden; border:1px solid rgba(255,255,255,0.03); }
+.video-card .card-body{ background:#0b0b0b; }
+
+/* learning box (gris grande con border-radius) */
+.learning-box{
+  background: #cfcfcf;   /* igual que la captura */
+  border-radius: 28px;
+  color: #222;
+  min-height: 100%;
+}
+
+.skills-text p {
+    color: #d1d1d1; /* color incorrecto */
+}
+
+/* tech line layout */
+.tech-line{ gap:12px; display:flex; align-items:center; }
+.tech-icon{ width:38px; text-align:center; font-size:22px; color:#666; }
+
+/* custom progress look (barra base gris y relleno) */
+.custom-progress{
+  height:12px;
+  background:#808080;
+  border-radius:8px;
+  overflow:hidden;
+}
+.custom-progress .progress-bar{ height:100%; border-radius:8px; transition: width 900ms cubic-bezier(.2,.8,.2,1); }
+
+/* colores exactos */
+.html-bar{ background:#00b300; width:0; } /* animará a 87% */
+.js-bar{ background:#f5e400; width:0; }   /* animará a 53% */
+.next-bar{ background:#666; width:0; }
+
+/* percent label */
+.progress-val{ width:48px; text-align:right; color:#444; font-weight:600; }
+
+/* ---------------------------
+   PORTFOLIO
+   --------------------------- */
+.section-title{ font-family:'Space Grotesk', sans-serif; font-size:1.9rem; color:var(--text-light); }
+.text-muted{ color:#cfcfcf !important; }
+
+.btn-outline-cyan{
+  border:1px solid rgba(127,230,247,0.85);
+  color: var(--btn-cyan);
+  background: transparent;
+  border-radius:8px;
+  padding:6px 10px;
+}
+
+.project-card{ display:flex; flex-direction:column; gap:8px; }
+.project-thumb{ background:#fff; height:160px; border-radius:6px; border:3px solid #111; }
+.btn-cta-sm{ background: var(--btn-cyan); color:#000; border-radius:6px; padding:6px 10px; }
+
+/* ---------------------------
+   CONTACT
+   --------------------------- */
+.form-input-light{ background:#fff; color:#111; border:1px solid #e2e2e2; border-radius:8px; padding:10px; }
+.form-input-light:focus{ outline:none; box-shadow:0 0 0 4px rgba(0,212,255,0.06); border-color: #00d4ff; }
+
+/* social vertical + brace */
+.social-vertical{ display:flex; flex-direction:column; gap:14px; }
+.social-big{ font-size:20px; width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.03); color:var(--text-light); }
+.brace{ font-size:64px; color:#fff; margin-left:8px; line-height:0.9; }
+.user-handle{ font-family:'Space Grotesk',sans-serif; font-size:1.05rem; color:#ddd; }
+
+/* FOOTER */
+.footer{ color:#8f8f8f; background:transparent; }
+
+/* RESPONSIVE */
+@media (max-width: 992px){
+  .hero-title{ font-size:2.6rem; }
+  .brace{ font-size:48px; }
+  .learning-box{ border-radius:20px; padding:18px; }
+  .project-thumb{ height:130px; }
+}
+@media (max-width:576px){
+  body{ padding-top:110px; }
+  .hero-title{ font-size:2rem; }
+  .brace{ display:none; }
+  .video-box{ max-width:100%; }
+}
+/* LOGO NAVBAR */
+.nav-logo{
+  height: 58px;           /* tamaño óptimo para navbar de 130px */
+  width: auto;            /* mantiene proporción del SVG */
+  display: block;
+  object-fit: contain;
+  margin-right: 6px;
+}
+
+/* cuando el navbar colapse (mobile) */
+@media (max-width: 576px){
+  .nav-logo{
+    height: 42px;         /* tamaño reducido mobile */
+  }
+}
+
+/* Match width with video-box */
+.video-box-width {
+  width: 100%;
+  max-width: 420px;   /* MISMO valor exacto que .video-box */
+  margin-left: auto;  /* Para alinearlo a la derecha tal como estaba */
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 576px){
+  .video-box-width {
+    max-width: 100%;
+  }
+}
