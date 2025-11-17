@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MathiasPaez.com — Portfolio</title>
+
+  <!-- FUENTES -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome -->
+ <script src="https://kit.fontawesome.com/d0b0943601.js" crossorigin="anonymous"></script>
+
+  <!-- CSS  ASSETS -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (FIJA 130px) -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <!-- logo / brand -->
+     <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="/assets/img/logo.svg" alt="MathiasPaez Logo" class="nav-logo">
+    <span class="ms-2">MATHIASPAEZ.COM</span></a>
+
+
+      <!-- toggler para mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link menu-link" href="#home">¿Qué estoy haciendo?</a></li>
+          <li class="nav-item"><a class="nav-link menu-link" href="#doing">Mi progreso</a></li>
+          <li class="nav-item"><a class="nav-link menu-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link menu-link" href="#recursos">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link menu-link" href="#contacto">¡Contactame!</a></li>
+          <!-- ICONOS RRSS -->
+          <li class="nav-item ms-3 d-none d-lg-flex align-items-center">
+            <a class="nav-icon me-2" href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a class="nav-icon me-2" href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="nav-icon me-2" href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN: secciones (ONE SCROLL) -->
+  <main>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="section section-hero d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-start">
+          <!-- Texto grande a la izquierda -->
+          <div class="col-lg-7 col-md-8">
+       
+            <h1 class="hero-title">Camino a ser
+              <span class="hero-yellow">FullStack</span>
+              <span class="hero-yellow">Developer</span>
+            </h1>
+          </div>
+
+          <!-- Video y newsletter a la derecha -->
+          <div class="col-lg-5 col-md-12 d-flex flex-column align-items-end">
+            <div class="w-100 video-box">
+              <div class="ratio ratio-16x9">
+                <!-- embed de ejemplo (reemplazar por tu video) -->
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video" allowfullscreen></iframe>
+              </div>
+
+              <!-- barra de control visual-->
+              <div class="video-controls mt-2 d-flex align-items-center justify-content-between">
+                <div class="video-progress mock-progress"><div class="mock-progress-fill" style="width:18%"></div></div>
+                <div class="small-controls">
+                  <i class="fa-solid fa-gear"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Newsletter: input blanco y boton celeste, alineado -->
+            <form class="newsletter-form mt-3 video-box-width" onsubmit="return false;">
+              <input class="form-control form-input-light me-2" type="email" placeholder="Ingresá tu e-mail">
+              <button class="btn btn-newsletter">Suscribirme</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- "Esto es lo que estoy haciendo" -->
+    <section id="doing" class="section section-dark py-5">
+      <div class="container">
+        <h2 class="text-center section-title mb-4">Esto es lo que estoy haciendo...</h2>
+
+        <div class="row gx-4 gy-4 align-items-start">
+          <!-- Columna izquierda: video + descripcion -->
+          <div class="col-lg-5">
+            <div class="card video-card overflow-hidden">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Último video" allowfullscreen></iframe>
+              </div>
+              <div class="card-body bg-dark text-white">
+                <h5 class="mb-2">Último video:</h5>
+                <p class="fw-bold mb-1">HTML, CSS y JS. Sin esto no soy nadie.</p>
+                <p class="small text-muted mb-3">La sagrada trinidad, HTML, CSS y Javascript. Antes de adentrarte en cualquier tecnología para desarrollar aplicaciones web, esto es lo esencial, brinda la base sólida para seguir adelante.</p>
+                <button class="btn btn-outline-cyan btn-sm">Visitar Canal</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: tarjeta gris con progreso y texto -->
+          <div class="col-lg-7">
+            <div class="learning-box p-4 p-lg-5">
+              <div class="row">
+                <div class="col-md-7">
+                  <h5 class="mb-3">Ahora estoy aprendiendo:</h5>
+
+                  <!-- HTML -->
+                  <div class="d-flex align-items-center mb-3 tech-line">
+                    <i class="fa-brands fa-html5 tech-icon"></i>
+                    <div class="flex-fill me-2">
+                      <div class="progress custom-progress">
+                        <div class="progress-bar html-bar" role="progressbar" style="width: 0%" data-target="87"></div>
+                      </div>
+                    </div>
+                    <div class="progress-val">87%</div>
+                  </div>
+
+                  <!-- JS -->
+                  <div class="d-flex align-items-center mb-3 tech-line">
+                    <i class="fa-brands fa-js tech-icon"></i>
+                    <div class="flex-fill me-2">
+                      <div class="progress custom-progress">
+                        <div class="progress-bar js-bar" role="progressbar" style="width: 0%" data-target="53"></div>
+                      </div>
+                    </div>
+                    <div class="progress-val">53%</div>
+                  </div>
+
+                  <h5 class="mt-4 mb-3">Lo que sigue es:</h5>
+
+                  <!-- Node -->
+                  <div class="d-flex align-items-center mb-3 tech-line">
+                    <i class="fa-brands fa-node-js tech-icon"></i>
+                    <div class="flex-fill me-2">
+                      <div class="progress custom-progress">
+                        <div class="progress-bar next-bar" role="progressbar" style="width: 0%" data-target="0"></div>
+                      </div>
+                    </div>
+                    <div class="progress-val">0%</div>
+                  </div>
+
+                  <!-- React -->
+                  <div class="d-flex align-items-center mb-3 tech-line">
+                    <i class="fa-brands fa-react tech-icon"></i>
+                    <div class="flex-fill me-2">
+                      <div class="progress custom-progress">
+                        <div class="progress-bar next-bar" role="progressbar" style="width: 0%" data-target="0"></div>
+                      </div>
+                    </div>
+                    <div class="progress-val">0%</div>
+                  </div>
+
+                </div>
+
+                <!-- ¿Qué puedo hacer? -->
+                <div class="col-md-5">
+                  <h5 class="mb-3">¿Que puedo hacer?</h5>
+                  <p class="small ">Soy capaz de llevar a cabo proyectos que requieren maquetación estilo y comportamiento, cumpliendo con lo mínimo para el desarrollo de sitios web con la finalidad de promocionar productos, exponer ideas y dar identidad digital a empresas y emprendimientos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /row -->
+      </div> <!-- /container -->
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section section-dark py-5">
+      <div class="container">
+        <h2 class="text-center section-title mb-4">Mi Portfolio profesional:</h2>
+
+        <div class="row gx-4 gy-4 align-items-start">
+          <!-- izquierda: texto descriptivo -->
+          <div class="col-lg-4">
+            <p class="text-muted mb-4">Acá vas a encontrar tanto proyectos e ideas propias, como trabajos contratados por clientes inteligentes.</p>
+            <p class="text-muted mb-4">Todo proyecto llevado a cabo está presente, buscando documentar el resultado de mi esfuerzo, y ayudarte a conocerme.</p>
+            <button class="btn btn-outline-cyan btn-sm">¡Trabajemos juntos!</button>
+          </div>
+
+          <!-- derecha: grid 3x2 -->
+          <div class="col-lg-8">
+            <div class="row g-3">
+              <!-- 6 tarjetas -->
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                    <p>Nombre proyecto</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">ver proyecto</button></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                  <p>Nombre proyecto</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">ver proyecto</button></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                      <p>Nombre proyecto</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">ver proyecto</button></div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                      <p>Nombre proyecto</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">ver proyecto</button></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                      <p>Nombre proyecto</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">ver proyecto</button></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                      <p>Nombre proyecto</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">ver proyecto</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  <!-- RECURSOS -->
+<section id="recursos" class="section section-dark py-5">
+      <div class="container">
+        <h2 class="text-center section-title mb-4">Recursos para compartir:</h2>
+
+        <div class="row gx-4 gy-4 align-items-start">
+          <!-- izquierda: texto descriptivo -->
+          <div class="col-lg-4">
+            <p class="text-muted mb-4">Desde tips para documentación hasta lo que considere que sea bueno compartir con la comunidad</p>
+            <p class="text-muted mb-4">Sea mío, sea tuyo y querés compartirlo, es un espacio para la visibilidad de recursos, utilizalos, son gratis.</p>
+            <button class="btn btn-outline-cyan btn-sm">Enviar Recurso</button>
+          </div>
+
+          <!-- derecha: grid 3x2 -->
+          <div class="col-lg-8">
+            <div class="row g-3">
+              <!-- 6 tarjetas -->
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                    <p>Nombre recurso</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">Descargar</button></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                   <p>Nombre recurso</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">Descargar</button></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                    <p>Nombre recurso</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">Descargar</button></div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                   <p>Nombre recurso</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">Descargar</button></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                    <p>Nombre recurso</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">Descargar</button></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="project-card">
+                    <p>Nombre recurso</p>
+                  <div class="project-thumb"></div>
+                  <div class="project-cta text-center"><button class="btn btn-cta-sm">Descargar</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section section-dark py-5">
+      <div class="container">
+        <h2 class="text-center section-title mb-4">¡Contactame y trabajemos juntos!</h2>
+
+        <div class="row gx-4 gy-4 align-items-start">
+          <!-- Formulario -->
+          <div class="col-lg-6">
+            <h5>Formulario:</h5>
+            <p class="small text-muted">Si tu consulta no es inmediata, recomiendo que rellenes el formulario y me comentes qué tenés en mente. La respuesta es en 24 a 48 horas hábiles.</p>
+
+            <form>
+              <input class="form-control form-input-light mb-3" type="text" placeholder="Ingresá tu nombre">
+              <input class="form-control form-input-light mb-3" type="email" placeholder="Ingresá tu e-mail">
+              <textarea class="form-control form-input-light mb-3" rows="5" placeholder="Contanos tu idea o requerimiento"></textarea>
+              <button class="btn btn-newsletter">Enviar</button>
+            </form>
+          </div>
+
+          <!-- Redes con brace '}' -->
+          <div class="col-lg-6">
+            <h5>Otros medios de contacto:</h5>
+            <p class="small text-muted">Podés visitar mis redes sociales para estar al tanto de cómo va mi progreso, y hacer consultas o recibir tips de desarrollo y documentación.</p>
+
+            <div class="row align-items-center mt-4">
+              <div class="col-auto">
+                <div class="social-vertical">
+                  <a class="social-big" href="#"><i class="fa-brands fa-youtube"></i></a>
+                  <a class="social-big" href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a class="social-big" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a class="social-big" href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+
+              <div class="col-auto">
+                <div class="brace">}</div>
+              </div>
+
+              <div class="col">
+                <div class="user-handle">@mathiaspaezdev</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer text-center py-3">
+    Copyright 2025 - MathiasPaez.com - Documentando mi camino.
+  </footer>
+
+  <!-- BOOTSTRAP JS (bundle incluye popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS ASSETS -->
+  <script src="/assets/js/scripts.js"></script>
+</body>
+</html>
